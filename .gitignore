@@ -1,6 +1,10 @@
 # Superpowers brainstorming sessions
 .superpowers/
 
+# Backend env
+backend/.env
+backend/venv/
+
 # Logs
 logs
 *.log
@@ -141,3 +145,4 @@ dist
 # Claude
 CLAUDE.md
 docs/
+.claude
