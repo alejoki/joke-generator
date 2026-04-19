@@ -24,7 +24,7 @@ app.add_middleware(
     allow_headers=["Content-Type"],
 )
 
-GEMINI_MODEL = "gemini-3.1-flash-lite"
+GEMINI_MODEL = "gemini-2.5-flash-lite"
 
 _genai_client = None
 
@@ -53,7 +53,7 @@ class GenerateRequest(BaseModel):
 
 
 @app.post("/generate")
-@limiter.limit("20/minute")
+@limiter.limit("10/minute")
 async def generate(request: Request, body: GenerateRequest):
     prompt = build_prompt(body.category, body.keywords)
     try:
@@ -62,5 +62,6 @@ async def generate(request: Request, body: GenerateRequest):
         if not joke:
             return JSONResponse(status_code=502, content={"detail": "Empty response from Gemini"})
         return {"joke": joke}
-    except Exception:
-        return JSONResponse(status_code=502, content={"detail": "Gemini request failed"})
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        return JSONResponse(status_code=502, content={"detail": f"Gemini request failed: {e}"})
