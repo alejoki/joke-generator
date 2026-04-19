@@ -116,17 +116,14 @@
   border-radius: 8px;
   padding: 10px 14px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .joke-history__preview {
   color: #aaa;
   font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: pre-wrap;
 }
 
 .joke-history__tag {

@@ -16,7 +16,7 @@ export function KeywordInput({ value, onChange, onGenerate, loading, error }) {
           onClick={onGenerate}
           disabled={loading}
         >
-          {loading ? 'Generating…' : '✨ Generate'}
+          {loading ? 'Generating…' : 'Generate'}
         </button>
       </div>
       {error && <p className="keyword-input__error">{error}</p>}

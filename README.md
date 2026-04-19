@@ -37,7 +37,7 @@ The frontend never talks to Gemini directly — all AI calls go through the back
 | Frontend | React 18 + Vite | Fast dev server, minimal config, standard for SPAs |
 | Testing (frontend) | Vitest + jsdom | Built into the Vite ecosystem, no separate Jest config needed |
 | Backend | Python + FastAPI | Required by the course; FastAPI gives automatic request validation via Pydantic and async support with minimal boilerplate |
-| AI SDK | `google-genai` | Official Google SDK for Gemini; the older `google-generativeai` package is deprecated |
+| AI SDK | `google-genai` | Official Google SDK for Gemini |
 | Rate limiting | slowapi | One-decorator rate limiting for FastAPI, per-IP out of the box |
 | Env management | python-dotenv | Standard way to load `.env` files in Python without exposing secrets |
 | Persistence | localStorage | No database needed — history is per-browser and doesn't need to survive server restarts |
