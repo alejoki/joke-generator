@@ -146,4 +146,4 @@ This project was built with significant help from **Claude (Anthropic)** via Cla
 - Generated an implementation plan broken into 15 tasks with TDD steps
 - Wrote the majority of the code (backend and frontend), including all test files
 
-The developer directed the design decisions (full-stack architecture, categories, localStorage persistence, rate limiting approach, model selection) and reviewed and approved each implementation step.
+The developer directed the design decisions (full-stack architecture, frontend design, categories, localStorage persistence, rate limiting approach, model selection) and reviewed and approved each implementation step.
